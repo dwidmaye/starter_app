@@ -23,7 +23,7 @@ describe StoriesController do
   # This should return the minimal set of attributes required to create a valid
   # Story. As you add validations to Story, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "goal" => "MyString" } }
+  let(:valid_attributes) { { goal: "goal", stakeholder: "stakeholder", behavior: "behavior" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in

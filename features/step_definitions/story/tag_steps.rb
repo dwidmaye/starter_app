@@ -9,6 +9,9 @@ end
 
 Given(/^I add a tag to the story$/) do
   within '.edit_story' do
+    step %{I fill in "Goal" with "foo"}
+    step %{I fill in "Stakeholder" with "bar"}
+    step %{I fill in "Behavior" with "xyz"}
     step %{I fill in "story_tag" with "myTag"}
   end
 end
@@ -18,5 +21,6 @@ Given(/^I save the tag$/) do
 end
 
 Then(/^I see that the story has a tag$/) do
-  pending # express the regexp above with the code you wish you had
+  story = Story.first
+  visit url_for(story)
 end

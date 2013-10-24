@@ -9,10 +9,9 @@ When(/^I enter the story details$/) do
 end
 
 When(/^I save the story$/) do
-  pending #step %{I press "Submit"}
+  step %{I press "Submit"}
 end
 
-
-Then(/^I should see a "(.*?)" message$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see a success message$/) do
+  expect(page).to have_content 'success'
 end

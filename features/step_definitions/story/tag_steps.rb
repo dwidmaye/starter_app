@@ -1,13 +1,17 @@
 Given(/^a story exists$/) do
-  story = FactoryGirl.create(:story)
+  FactoryGirl.create(:story)
 end
 
 Given(/^I am on the story edit screen$/) do
-  current_path '/stories/1'
+  story = Story.first
+  visit edit_story_path(story)
 end
 
 Given(/^I add a tag to the story$/) do
-  pending # express the regexp above with the code you wish you had
+  value = "myValue"
+  within 'story_form' do
+    fill_in 'tag', :with => value
+  end
 end
 
 Given(/^I save the tag$/) do

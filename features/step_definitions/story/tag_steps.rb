@@ -8,14 +8,13 @@ Given(/^I am on the story edit screen$/) do
 end
 
 Given(/^I add a tag to the story$/) do
-  value = "myValue"
-  within 'story_form' do
-    fill_in 'tag', :with => value
+  within '.edit_story' do
+    step %{I fill in "story_tag" with "myTag"}
   end
 end
 
 Given(/^I save the tag$/) do
-  pending # express the regexp above with the code you wish you had
+  step %{I press "Submit"}
 end
 
 Then(/^I see that the story has a tag$/) do

@@ -29,6 +29,17 @@ describe Story do
     end
   end
 
+  context "update a story" do
+    let(:story) do
+      FactoryGirl.create(:story)
+    end
+
+    it "should not have a tag longer than 40 characters" do
+      story.tag = 'a'*41
+      story.should_not be_valid
+    end
+  end
+
   context "destroy a story" do
     it "should delete a story" do
       story = Story.create(goal: "mygoal", stakeholder: "stakeholder", behavior: "behavior")

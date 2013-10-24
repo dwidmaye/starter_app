@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @story.goal %>
+</p>
+
+<p>
+  <strong>Stakeholder:</strong>
+  <%= @story.stakeholder %>
+</p>
+
+<p>
+  <strong>Behavior:</strong>
+  <%= @story.behavior %>
+</p>
+
+<p>
+  <strong>Business value:</strong>
+  <%= @story.business_value %>
+</p>
+
+<p>
+  <strong>Complexity value:</strong>
+  <%= @story.complexity_value %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @story.tag %>
+</p>
+
+<p>
+  <strong>Assignee:</strong>
+  <%= @story.assignee %>
+</p>
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Back', stories_path %>

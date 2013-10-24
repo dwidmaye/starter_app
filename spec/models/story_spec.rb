@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Story do
 
-  context "create a story" do
+  context "create a story with attributes" do
 
     it "can be instantiated" do
       Story.new.should be_an_instance_of(Story)
@@ -32,7 +32,8 @@ describe Story do
   context "destroy a story" do
     it "should delete a story" do
       story = Story.create(goal: "mygoal", stakeholder: "stakeholder", behavior: "behavior")
-      story.destroy.should be_an_instance_of(Story)
+      story.destroy
+      Story.where(id: story.id).should_not be_present
     end
   end
 

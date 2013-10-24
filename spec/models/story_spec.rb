@@ -30,7 +30,10 @@ describe Story do
   end
 
   context "destroy a story" do
-    it "should delete a story"
+    it "should delete a story" do
+      story = Story.create(goal: "mygoal", stakeholder: "stakeholder", behavior: "behavior")
+      story.destroy.should be_an_instance_of(Story)
+    end
   end
 
 

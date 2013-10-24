@@ -9,7 +9,8 @@ describe "stories/new" do
       :business_value => 1,
       :complexity_value => 1,
       :tag => "MyString",
-      :assignee => "MyString"
+      :assignee => "MyString",
+      :status => "ice box"
     ).as_new_record)
   end
 
@@ -21,10 +22,11 @@ describe "stories/new" do
       assert_select "input#story_goal[name=?]", "story[goal]"
       assert_select "input#story_stakeholder[name=?]", "story[stakeholder]"
       assert_select "input#story_behavior[name=?]", "story[behavior]"
-      assert_select "input#story_business_value[name=?]", "story[business_value]"
-      assert_select "input#story_complexity_value[name=?]", "story[complexity_value]"
+      assert_select "select#story_business_value[name=?]", "story[business_value]"
+      assert_select "select#story_complexity_value[name=?]", "story[complexity_value]"
       assert_select "input#story_tag[name=?]", "story[tag]"
       assert_select "input#story_assignee[name=?]", "story[assignee]"
+      assert_select "select#story_status[name=?]", "story[status]"
     end
   end
 end

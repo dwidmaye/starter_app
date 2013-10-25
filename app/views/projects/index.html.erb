@@ -1,0 +1,17 @@
+<h1>Listing projects</h1>
+<div class="project-list">
+  <% @projects.each do |project| %>
+    <div class="project row">
+      <div class="project-name small-8 columns">
+        <div class="row" title="business value">
+          <%= link_to project.name, edit_project_path(project) %>
+        </div>
+      </div>
+      <div class="small-4 columns">
+        <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>             
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'New Project', new_project_path %>

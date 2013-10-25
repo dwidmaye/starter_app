@@ -11,7 +11,3 @@ end
 When(/^I save the story$/) do
   step %{I press "Submit"}
 end
-
-Then(/^I should see a success message$/) do
-  expect(page).to have_content 'success'
-end

@@ -1,0 +1,16 @@
+// Place all the styles related to the Projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.project {
+  border: 1px solid #333;
+}
+.project-name {
+  border-right: 1px solid #333;
+  div {
+    padding: 6px;
+    text-align: center;
+    &:first-child {
+      border-bottom: 1px solid #333;
+    }
+  }    
+}

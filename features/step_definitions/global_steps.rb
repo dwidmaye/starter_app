@@ -9,3 +9,7 @@ end
 When /^I click "([^\"]*)"$/ do |link|      
   click_link(link)
 end
+
+Then(/^I should see a success message$/) do
+  expect(page).to have_content 'success'
+end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131024225431) do
+ActiveRecord::Schema.define(version: 20131025170945) do
 
   create_table "comments", force: true do |t|
     t.integer  "story_id"
@@ -35,5 +35,13 @@ ActiveRecord::Schema.define(version: 20131024225431) do
   end
 
   add_index "stories", ["business_value"], name: "index_stories_on_business_value", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "password"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

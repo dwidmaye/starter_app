@@ -9,5 +9,5 @@ When(/^I enter the story details$/) do
 end
 
 When(/^I save the story$/) do
-  step %{I press "Submit"}
+  step %{I press "Save Story"}
 end

@@ -17,7 +17,7 @@ Given(/^I add a tag to the story$/) do
 end
 
 Given(/^I save the tag$/) do
-  step %{I press "Submit"}
+  step %{I press "Save Story"}
 end
 
 Then(/^I see that the story has a tag$/) do

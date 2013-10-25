@@ -29,5 +29,5 @@ Then(/^I should see the edit page$/) do
 end
 
 Then(/^when I change the title to "(.*?)"$/) do |title|
-  step %{I fill in "Behavior" with "#{title}"}
+  step %{I fill in "I want to" with "#{title}"}
 end

@@ -9,9 +9,9 @@ end
 
 Given(/^I add a tag to the story$/) do
   within '.edit_story' do
-    step %{I fill in "Goal" with "foo"}
-    step %{I fill in "Stakeholder" with "bar"}
-    step %{I fill in "Behavior" with "xyz"}
+    step %{I fill in "In order to" with "foo"}
+    step %{I fill in "As a" with "bar"}
+    step %{I fill in "I want to" with "xyz"}
     step %{I fill in "story_tag" with "myTag"}
   end
 end

@@ -11,8 +11,19 @@
     </div>
   <% end %>
 
+
   <div class="row">
     <div class="large-8 columns">
+
+      <div class="row">
+        <div class="large-2 columns">
+          <%= f.label :project_id, "Project"%>
+        </div>
+        <div class="large-10 columns">
+          <%= f.select :project_id, options_from_collection_for_select(@projects, 'id', 'name')  %>
+        </div>
+      </div>
+
       <div class="row">
         <div class="large-2 columns">
           <%= f.label :goal, "In order to", class: "inline" %>

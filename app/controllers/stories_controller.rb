@@ -14,15 +14,18 @@ class StoriesController < ApplicationController
   # GET /stories/new
   def new
     @story = Story.new
+    @projects = Project.all
   end
 
   # GET /stories/1/edit
   def edit
+    @projects = Project.all
   end
 
   # POST /stories
   def create
     @story = Story.new(story_params)
+    @projects = Project.all
 
     if @story.save
       redirect_to @story, notice: 'Story was successfully created.'
@@ -54,6 +57,6 @@ class StoriesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def story_params
-      params.require(:story).permit(:goal, :stakeholder, :behavior, :business_value, :complexity_value, :tag, :assignee)
+      params.require(:story).permit(:goal, :stakeholder, :behavior, :business_value, :complexity_value, :tag, :assignee, :project_id)
     end
 end

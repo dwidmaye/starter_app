@@ -6,6 +6,7 @@ When(/^I enter the story details$/) do
   step %{I fill in "In order to" with "foo"}
   step %{I fill in "As a" with "bar"}
   step %{I fill in "I want to" with "xyz"}
+  step %{I select "Project" from "Project"}
 end
 
 When(/^I save the story$/) do

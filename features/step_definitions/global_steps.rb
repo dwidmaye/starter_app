@@ -21,3 +21,7 @@ end
 Given(/^"(.*?)" has CV "(.*?)"$/) do |title, cv|
   FactoryGirl.create(:story,behavior: title, complexity_value: cv )
 end
+
+When(/^I select "(.*?)" from "(.*?)"$/) do |option, name|
+  select(option, :from => name)
+end

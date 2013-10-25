@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025172152) do
+ActiveRecord::Schema.define(version: 20131025190154) do
 
   create_table "comments", force: true do |t|
     t.integer  "story_id"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20131025172152) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "status",           default: "ice box", null: false
+    t.integer  "project_id"
   end
 
   add_index "stories", ["business_value"], name: "index_stories_on_business_value", using: :btree

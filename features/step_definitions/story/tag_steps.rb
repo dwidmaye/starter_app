@@ -3,8 +3,7 @@ Given(/^a story exists$/) do
 end
 
 Given(/^I am on the story edit screen$/) do
-  story = Story.first
-  visit edit_story_path(story)
+  visit edit_story_path(Story.first)
 end
 
 Given(/^I add a tag to the story$/) do
@@ -13,6 +12,7 @@ Given(/^I add a tag to the story$/) do
     step %{I fill in "As a" with "bar"}
     step %{I fill in "I want to" with "xyz"}
     step %{I fill in "story_tag" with "myTag"}
+    step %{I select "Project" from "Project"}
   end
 end
 

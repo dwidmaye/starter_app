@@ -11,43 +11,93 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :project_id, "Project" %><br>
-    <%= f.select :project_id, options_from_collection_for_select(@projects, 'id', 'name')  %>
-  </div>
-  <div class="field">
-    <%= f.label :goal %><br>
-    <%= f.text_field :goal %>
-  </div>
-  <div class="field">
-    <%= f.label :stakeholder %><br>
-    <%= f.text_field :stakeholder %>
-  </div>
-  <div class="field">
-    <%= f.label :behavior %><br>
-    <%= f.text_field :behavior %>
-  </div>
-  <div class="field">
-    <%= f.label :business_value %><br>
-    <%= f.select :business_value, Story::VALID_ESTIMATES %>
-  </div>
-  <div class="field">
-    <%= f.label :complexity_value %><br>
-    <%= f.select :complexity_value, Story::VALID_ESTIMATES %>
-  </div>
-  <div class="field">
-    <%= f.label :tag %><br>
-    <%= f.text_field :tag %>
-  </div>
-  <div class="field">
-    <%= f.label :assignee %><br>
-    <%= f.text_field :assignee %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.select :status, Story::VALID_STATUSES %>
-  </div>  
-  <div class="actions">
-    <%= f.submit "Submit" %>
+
+  <div class="row">
+    <div class="large-8 columns">
+
+      <div class="row">
+        <div class="large-2 columns">
+          <%= f.label :project_id, "Project"%>
+        </div>
+        <div class="large-10 columns">
+          <%= f.select :project_id, options_from_collection_for_select(@projects, 'id', 'name')  %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-2 columns">
+          <%= f.label :goal, "In order to", class: "inline" %>
+        </div>
+        <div class="large-10 columns">
+          <%= f.text_field :goal %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-2 columns">
+          <%= f.label :stakeholder, "As a", class: "inline" %>
+        </div>
+        <div class="large-10 columns">
+          <%= f.text_field :stakeholder %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-2 columns">
+          <%= f.label :behavior, "I want to", class: "inline" %>
+        </div>
+        <div class="large-10 columns">
+          <%= f.text_field :behavior %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-2 columns">
+          <%= f.label :tag, class: "inline" %>
+        </div>
+        <div class="large-10 columns">
+          <%= f.text_field :tag %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-2 columns">
+          <%= f.label :assignee, class: "inline" %>
+        </div>
+        <div class="large-10 columns">
+          <%= f.text_field :assignee %>
+        </div >
+      </div>
+
+      <div class="row">
+        <div class="large-2 columns">
+          <%= f.label :status, class: "inline" %>
+        </div>
+        <div class="large-10 columns">
+          <%= f.select :status, Story::VALID_STATUSES %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-10 columns offset-large-2">
+          <div class="actions">
+            <%= f.submit "Save Story" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="large-4 columns">
+      <div class="row">
+        <div class="large-6 columns">
+          <%= f.label :business_value %>
+          <%= f.select :business_value, Story::VALID_ESTIMATES %>
+        </div>
+
+        <div class="large-6 columns">
+          <%= f.label :complexity_value %>
+          <%= f.select :complexity_value, Story::VALID_ESTIMATES %>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>

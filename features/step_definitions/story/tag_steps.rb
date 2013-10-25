@@ -8,16 +8,16 @@ end
 
 Given(/^I add a tag to the story$/) do
   within '.edit_story' do
-    step %{I fill in "Goal" with "foo"}
-    step %{I fill in "Stakeholder" with "bar"}
-    step %{I fill in "Behavior" with "xyz"}
+    step %{I fill in "In order to" with "foo"}
+    step %{I fill in "As a" with "bar"}
+    step %{I fill in "I want to" with "xyz"}
     step %{I fill in "story_tag" with "myTag"}
     step %{I select "Project" from "Project"}
   end
 end
 
 Given(/^I save the tag$/) do
-  step %{I press "Submit"}
+  step %{I press "Save Story"}
 end
 
 Then(/^I see that the story has a tag$/) do

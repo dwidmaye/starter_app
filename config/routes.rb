@@ -1,4 +1,6 @@
 StarterApp::Application.routes.draw do
+  resources :users
+
   resources :stories do
     resources :comments, only: [:create, :destroy]
   end

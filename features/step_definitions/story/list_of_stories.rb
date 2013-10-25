@@ -12,10 +12,22 @@ Then(/^I should see "(.*?)"$/) do |title|
  expect(page).to have_content title 
 end
 
-When(/^I delete "(.*?)"$/) do |title|
-  step %{I click "Destroy"}
+#When(/^I delete "(.*?)"$/) do |title|
+#  step %{I click "Destroy"}
+#end
+
+#Then(/^I should should not see "(.*?)"$/) do |title|
+#  expect(page).should have_no_content(title)
+#end
+
+When(/^I click on the story title "(.*?)"$/) do |title|
+  click_link(title)
 end
 
-Then(/^I should should not see "(.*?)"$/) do |title|
-  expect(page).should have_no_content(title)
+Then(/^I should see the edit page$/) do
+  expect(page).to have_content "Editing story"
+end
+
+Then(/^when I change the title to "(.*?)"$/) do |title|
+  step %{I fill in "Behavior" with "#{title}"}
 end

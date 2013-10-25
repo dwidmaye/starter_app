@@ -13,3 +13,7 @@ end
 Then(/^I should see a success message$/) do
   expect(page).to have_content 'success'
 end
+
+When(/^I select "(.*?)" from "(.*?)"$/) do |option, name|
+  select(option, :from => name)
+end

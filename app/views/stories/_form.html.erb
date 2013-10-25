@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :project_id, "Project" %><br>
+    <%= f.select :project_id, options_from_collection_for_select(@projects, 'id', 'name')  %>
+  </div>
+  <div class="field">
     <%= f.label :goal %><br>
     <%= f.text_field :goal %>
   </div>

@@ -9,7 +9,7 @@ describe Story do
     end
 
     it "will save a story with required attributes" do
-      story = Story.new(:goal => "x", :stakeholder => "qwe", :behavior => "b")
+      story = FactoryGirl.create(:story)
       story.save.should be true
     end
 

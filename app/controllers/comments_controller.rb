@@ -4,9 +4,15 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     if @comment.save
-      redirect_to @comment, notice: 'Comment was successfully created.'
+      redirect_to @comment.story, notice: 'Comment was successfully created.'
     else
-      render action: 'new'
+      #render action: 'new'
     end
+  end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:body, :story_id)
   end
 end

@@ -49,7 +49,7 @@ class StoriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_story
-      @story = Story.find(params[:id])
+      @story = Story.find(params[:id], include: :comments)
     end
 
     # Only allow a trusted parameter "white list" through.

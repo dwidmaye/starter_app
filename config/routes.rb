@@ -1,5 +1,7 @@
 StarterApp::Application.routes.draw do
-  resources :stories
+  resources :stories do
+    resources :comments, only: [:create, :destroy]
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

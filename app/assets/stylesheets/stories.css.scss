@@ -1,3 +1,30 @@
 // Place all the styles related to the Stories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.story {
+	border: 1px solid #333;
+}
+.story-estimations {
+  border-right: 1px solid #333;
+  div {
+    padding: 6px;
+    text-align: center;
+    &:first-child {
+      border-bottom: 1px solid #333;
+    }
+  }    
+}
+.story-details {
+  padding: 10px 5px;
+}
+.story-details--behavior {
+  font-size: emCalc(14px);
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin: 0;
+}
+.story-details--status {
+  font-size: emCalc(12px);
+  margin: 0;
+}

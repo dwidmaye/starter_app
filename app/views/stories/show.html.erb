@@ -36,7 +36,8 @@
 </p>
 
 <button type="button">Add Comment</button>
-<%=render :partial => "comments/form" %>
+<%= render :partial => "comments/form" %>
+<%= render @story.comments %>
 
 <%= link_to 'Edit', edit_story_path(@story) %>
 <%= link_to 'Back', stories_path %>

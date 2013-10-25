@@ -7,18 +7,14 @@ When(/^I click on 'Add Comment' button$/) do
   step %{I press "Add Comment"}
 end
 
-When(/^I see a textarea field$/) do
-
-end
-
 When(/^I write some text in textarea field$/) do
-  pending # express the regexp above with the code you wish you had
+  fill_in :comment_body, with: "some comment"
 end
 
 When(/^I save the comment$/) do
-  pending # express the regexp above with the code you wish you had
+  step %{I press "Submit"}
 end
 
 Then(/^I see the added comment to story on same page\.$/) do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content("some comment")
 end

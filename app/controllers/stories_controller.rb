@@ -3,7 +3,7 @@ class StoriesController < ApplicationController
 
   # GET /stories
   def index
-    @stories = Story.all
+    @stories = Story.bv_descending
   end
 
   # GET /stories/1

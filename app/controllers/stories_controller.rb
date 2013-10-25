@@ -8,6 +8,7 @@ class StoriesController < ApplicationController
 
   # GET /stories/1
   def show
+    @comment = Comment.new(story_id: @story.id)
   end
 
   # GET /stories/new

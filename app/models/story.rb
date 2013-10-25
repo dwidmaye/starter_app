@@ -1,4 +1,6 @@
 class Story < ActiveRecord::Base
+  has_many :comment
+
   VALID_STATUSES = ['ice box', 'ready', 'started', 'done']
   VALID_ESTIMATES = (1..5).to_a
 

@@ -1,4 +1,4 @@
-Feature: 
+Feature:
   In order to create a story
   As a user
   I want to create story using gherkin style

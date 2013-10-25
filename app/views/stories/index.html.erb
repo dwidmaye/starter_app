@@ -11,14 +11,18 @@
           <%= story.complexity_value %>
         </div>
       </div>
-      <div class="story-details small-11 columns">
+      <div class="story-details small-10 columns">
         <div class="story-details--behavior">
-          <%= story.behavior %>
+          <%= link_to story.behavior , edit_story_path(story) %>
         </div>
         <div class="story-details--status">
           <%= story.status %>
         </div>
       </div>
+      <div class="small-1 columns">
+        <%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+      
     </div>  
   <% end %>
 </div>

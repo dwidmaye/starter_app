@@ -2,6 +2,10 @@ require 'spec_helper'
 
 describe Story do
 
+  context "associations check" do
+    it { should have_many(:comments) }
+  end
+
   context "create a story with attributes" do
 
     it "can be instantiated" do
